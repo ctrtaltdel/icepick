@@ -1,5 +1,5 @@
 import  React, { useState } from 'react';
-import { StyleSheet, View, Text, Button, FlatList, ScrollView, SafeAreaView, Alert} from 'react-native';
+import { TouchableOpacity, Linking, StyleSheet, View, Text, Button, FlatList, ScrollView, SafeAreaView, Alert} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
@@ -11,7 +11,7 @@ import { StatusBar } from 'expo-status-bar';
 function HomeScreen({navigation}) {
   return (
       <SafeAreaView style={styles.container}>
-      <View style={[styles.menu, styles.one, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('One')}   style={[styles.one]}>Icebreakers Testing Testing Long Text</Text></View>
+      <View style={[styles.menu, styles.one, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('One')}   style={[styles.one]}>Icebreakers</Text></View>
       <View style={[styles.menu, styles.two, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Two')}   style={[styles.two]}>Pickup Lines</Text></View>
       <View style={[styles.menu, styles.three, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Three')} style={[styles.three]}>Converstation Starters: Sports</Text></View>
       <View style={[styles.menu, styles.four, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Four')}  style={[styles.four]}>Converstation Starters: Games</Text></View>
@@ -326,9 +326,28 @@ function SevenScreen() {
 function EightScreen() {
   return (
     <View style={styles.page}>
-      <Text style={styles.textBox}>Details! Info! Put it Here!
+      <Text style={styles.detailsTextBox}>
+        <Text style={{    fontSize: 18,fontWeight: 'bold'}}>App Details and Dependencies</Text>{"\n"}{"\n"}{"\n"}
+      <Text style={{fontWeight: 'bold'}}>Version: </Text> 1.0{"\n"}
+        <Text style={{fontWeight: 'bold'}}>Name: </Text>icepick{"\n"}
+        <Text style={{fontWeight: 'bold'}}>Version: </Text>1.0.0{"\n"}
+        <Text style={{fontWeight: 'bold'}}>Dependencies: </Text>{"\n"}
+        @react-navigation/native: ^6.1.9{"\n"}
+        @react-navigation/native-stack: ^6.9.15{"\n"}
+        <Text style={{fontWeight: 'bold'}}>Expo: </Text>~49.0.15{"\n"}
+        <Text style={{fontWeight: 'bold'}}>Expo-status-bar: </Text>~1.6.0{"\n"}
+        <Text style={{fontWeight: 'bold'}}>React: </Text> 18.2.0{"\n"}
+        <Text style={{fontWeight: 'bold'}}>React-native: </Text> 0.72.6{"\n"}
+        <Text style={{fontWeight: 'bold'}}>React-native-safe-area-context: </Text>4.6.3{"\n"}
+        <Text style={{fontWeight: 'bold'}}>React-native-screens:</Text> ~3.22.0{"\n"}
+        <Text style={{fontWeight: 'bold'}}>Babel core version:</Text> 7.23.2{"\n"}{"\n"}
+        
+          <Text style={{color: 'blue', textDecorationLine: 'underline', fontWeight: 'bold'}}
+      onPress={() => Linking.openURL('https://github.com/ctrtaltdel/icepick')}>
+  Visit the our Github page to view the code in full!
+</Text>
+
       </Text>
-      <Text style={[styles.pressMe, styles.one]}>Press Here!</Text>
     </View>
   );
 }
@@ -396,6 +415,19 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: "black",
   },
+  detailsTextBox: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    // textAlign: 'center',
+    justifyContent: 'center',
+    fontSize: 15,
+    margin: 20,
+    padding: 15,
+    borderWidth: 5,
+    borderRadius: 5,
+    borderColor: "black",
+  },
   container: {
     flex: 1,
     backgroundColor: "#bababa",
@@ -428,48 +460,56 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "white",
     textAlign: "center",
+    fontWeight: 'bold',
   },
   two: {
     backgroundColor: "#00c4c4",
     borderRadius: 40,
     color: "white",
     textAlign: "center",
+    fontWeight: 'bold',
   },
   three: {
     backgroundColor: "#009d9d",
     borderRadius: 40,
     color: "white",
     textAlign: "center",
+    fontWeight: 'bold',
   },
   four: {
     backgroundColor: "#007676",
     borderRadius: 40,
     color: "white",
     textAlign: "center",
+    fontWeight: 'bold',
   },
   five: {
     backgroundColor: "#11c7c7",
     borderRadius: 40,
     color: "white",
     textAlign: "center",
+    fontWeight: 'bold',
   },
   six: {
     backgroundColor: "#00b1b1",
     borderRadius: 40,
     color: "white",
     textAlign: "center",
+    fontWeight: 'bold',
   },
   seven: {
     backgroundColor: "#008a8a",
     borderRadius: 40,
     color: "white",
     textAlign: "center",
+    fontWeight: 'bold',
   },
   eight: {
     backgroundColor: "#006262",
     borderRadius: 40,
     color: "white",
     textAlign: "center",
+    fontWeight: 'bold',
   },
 });
 
