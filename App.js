@@ -10,18 +10,16 @@ import { StatusBar } from 'expo-status-bar';
 
 function HomeScreen({navigation}) {
   return (
-    // <View>
       <SafeAreaView style={styles.container}>
-      {/* <ScrollView> */}
-      <Text onPress={() => navigation.navigate('One')} style={[styles.one, styles.menu]}>Icebreakers</Text>
-      <Text onPress={() => navigation.navigate('Two')} style={[styles.two, styles.menu]}>Pickup Lines</Text>
-      <Text onPress={() => navigation.navigate('Three')} style={[styles.three, styles.menu]}>Converstation Starters: Sports</Text>
-      <Text onPress={() => navigation.navigate('Four')} style={[styles.four, styles.menu]}>Converstation Starters: Games</Text>
-      <Text onPress={() => navigation.navigate('Five')} style={[styles.five, styles.menu]}>Get to Know You</Text>
-      <Text onPress={() => navigation.navigate('Six')} style={[styles.six, styles.menu]}>Anti-Pickup Lines</Text>
-      <Text onPress={() => navigation.navigate('Seven')} style={[styles.seven, styles.menu]}>Converstation Starters: Movies</Text>
-      <Text onPress={() => navigation.navigate('Eight')} style={[styles.eight, styles.menu]}>8 - unfinished details/settings</Text>
-    {/* </ScrollView> */}
+      <View style={[styles.menu, styles.one, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('One')}   style={[styles.one]}>Icebreakers Testing Testing Long Text</Text></View>
+      <View style={[styles.menu, styles.two, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Two')}   style={[styles.two]}>Pickup Lines</Text></View>
+      <View style={[styles.menu, styles.three, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Three')} style={[styles.three]}>Converstation Starters: Sports</Text></View>
+      <View style={[styles.menu, styles.four, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Four')}  style={[styles.four]}>Converstation Starters: Games</Text></View>
+      <View style={[styles.menu, styles.five, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Five')}  style={[styles.five]}>Get to Know You</Text></View>
+      <View style={[styles.menu, styles.six, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Six')}   style={[styles.six]}>Anti-Pickup Lines</Text></View>
+      <View style={[styles.menu, styles.seven, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Seven')} style={[styles.seven]}>Converstation Starters: Movies</Text></View>
+      <View style={[styles.menu, styles.eight, {justifyContent: 'center'}]}><Text onPress={() => navigation.navigate('Eight')} style={[styles.eight]}>Details</Text></View>
+
     </SafeAreaView>
   );
 }
@@ -65,7 +63,7 @@ function OneScreen() {
     <View style={styles.page}>
       <Text style={styles.textBox}>{iceBreaker}
       </Text>
-      <Text onPress={randomIceBreaker} style={[styles.pressMe, styles.one]}>Press Here!</Text>
+      <View style={[styles.pressMe, styles.one, {justifyContent: 'center'}]}><Text onPress={randomIceBreaker} style={[styles.one]}>Press Here!</Text></View>
     </View>
   );
 }
@@ -109,7 +107,7 @@ function TwoScreen() {
     <View style={styles.page}>
       <Text style={styles.textBox}>{iceBreaker}
       </Text>
-      <Text onPress={randomPickupLine} style={[styles.pressMe, styles.one]}>Press Here!</Text>
+      <View style={[styles.pressMe, styles.two, {justifyContent: 'center'}]}><Text onPress={randomPickupLine} style={[styles.two]}>Press Here!</Text></View>
       <StatusBar style="auto" />
     </View>    
       );
@@ -155,7 +153,8 @@ function ThreeScreen() {
         <View style={styles.page}>
         <Text style={styles.textBox}>{iceBreaker}
         </Text>
-        <Text onPress={randomSportsConversationStarter} style={[styles.pressMe, styles.one]}>Press Here!</Text>
+        <View style={[styles.pressMe, styles.three, {justifyContent: 'center'}]}>
+        <Text onPress={randomSportsConversationStarter} style={[styles.three]}>Press Here!</Text></View>
       </View>
   );
 }
@@ -199,7 +198,8 @@ function FourScreen() {
     <View style={styles.page}>
       <Text style={styles.textBox}>{iceBreaker}
       </Text>
-      <Text onPress={randomGameConversationStarter} style={[styles.pressMe, styles.one]}>Press Here!</Text>
+      <View style={[styles.pressMe, styles.four, {justifyContent: 'center'}]}>
+      <Text onPress={randomGameConversationStarter} style={[styles.four]}>Press Here!</Text></View>
     </View>
   );
 }
@@ -243,7 +243,8 @@ function FiveScreen() {
     <View style={styles.page}>
       <Text style={styles.textBox}>{iceBreaker}
       </Text>
-      <Text onPress={randomGettingToKnowYouQuestion} style={[styles.pressMe, styles.one]}>Press Here!</Text>
+      <View style={[styles.pressMe, styles.five, {justifyContent: 'center'}]}>
+      <Text onPress={randomGettingToKnowYouQuestion} style={[styles.five]}>Press Here!</Text></View>
     </View>
   );
 }
@@ -272,7 +273,8 @@ function SixScreen() {
     <View style={styles.page}>
       <Text style={styles.textBox}>{iceBreaker}
       </Text>
-      <Text onPress={randomAntiPickupLine} style={[styles.pressMe, styles.one]}>Press Here!</Text>
+      <View style={[styles.pressMe, styles.six, {justifyContent: 'center'}]}>
+      <Text onPress={randomAntiPickupLine} style={[styles.six]}>Press Here!</Text></View>
     </View>
   );
 }
@@ -316,7 +318,8 @@ function SevenScreen() {
     <View style={styles.page}>
       <Text style={styles.textBox}>{iceBreaker}
       </Text>
-      <Text onPress={randomMovieConversationStarter} style={[styles.pressMe, styles.one]}>Press Here!</Text>
+      <View style={[styles.pressMe, styles.seven, {justifyContent: 'center'}]}>
+      <Text onPress={randomMovieConversationStarter} style={[styles.seven]}>Press Here!</Text></View>
     </View>
   );
 }
@@ -358,8 +361,6 @@ const styles = StyleSheet.create({
     borderWidth: 5,
     borderColor: "black",
     borderRadius: 40,
-    // height: '20%',
-    // width: '42%',
     padding: 20,
     margin: 40,
     marginBottom: 80,
@@ -378,7 +379,6 @@ const styles = StyleSheet.create({
 
   },
   button: {
-    // flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -390,7 +390,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'center',
     fontSize: 24,
-    // width: '80%',
     margin: 20,
     padding: 15,
     borderWidth: 5,
@@ -403,6 +402,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
   },
   menu: {
+    // flex:1 ,
     color: "white",
     borderWidth: 5,
     borderColor: "black",
@@ -410,9 +410,13 @@ const styles = StyleSheet.create({
     height: '20%',
     width: '42%',
     margin: '4%',
+    paddingLeft: '5%',
+    paddingRight: '5%',
     ...Platform.select({
       ios: {
         lineHeight: 140,
+        textAlign: "center",
+        textAlignVertical: "center",
       },
       android: {},
     }),
@@ -422,42 +426,50 @@ const styles = StyleSheet.create({
   one: {
     backgroundColor: "#00d8d8",
     borderRadius: 40,
-    overflow: "hidden",
+    color: "white",
+    textAlign: "center",
   },
   two: {
     backgroundColor: "#00c4c4",
     borderRadius: 40,
-    overflow: "hidden",
+    color: "white",
+    textAlign: "center",
   },
   three: {
     backgroundColor: "#009d9d",
     borderRadius: 40,
-    overflow: "hidden",
+    color: "white",
+    textAlign: "center",
   },
   four: {
     backgroundColor: "#007676",
     borderRadius: 40,
-    overflow: "hidden",
+    color: "white",
+    textAlign: "center",
   },
   five: {
     backgroundColor: "#11c7c7",
     borderRadius: 40,
-    overflow: "hidden",
+    color: "white",
+    textAlign: "center",
   },
   six: {
     backgroundColor: "#00b1b1",
     borderRadius: 40,
-    overflow: "hidden",
+    color: "white",
+    textAlign: "center",
   },
   seven: {
     backgroundColor: "#008a8a",
     borderRadius: 40,
-    overflow: "hidden",
+    color: "white",
+    textAlign: "center",
   },
   eight: {
     backgroundColor: "#006262",
     borderRadius: 40,
-    overflow: "hidden",
+    color: "white",
+    textAlign: "center",
   },
 });
 
